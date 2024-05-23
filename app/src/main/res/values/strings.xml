@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="avengers_end_game"><b>Avengers:\nEnd Game</b></string>
+    <string name="_13"><b>13+</b></string>
+    <string name="_125_reviews"><b>125 Reviews</b></string>
+    <string name="storyline"><b>Storyline</b></string>
+    <string name="main_text">After the devastating events of Avengers: Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos\' actions and restore balance to the universe.</string>
+    <string name="cast"><b>Cast</b></string>
+    <string name="firstActor"><b>Robert Downey Jr.</b></string>
+    <string name="secondActor"><b>Chris Evans</b></string>
+    <string name="thirdActor"><b>Mark Ruffalo</b></string>
+    <string name="fourthActor"><b>Chris Hemsworth</b></string>
+    <string name="back">Back</string>
+    <string name="genre">Action, Adventure, Fantasy</string>
 </resources>

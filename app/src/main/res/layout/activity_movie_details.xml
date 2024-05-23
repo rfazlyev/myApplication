@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#191926"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_for_background"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:foreground="@drawable/mask"
+            android:scaleType="centerCrop"
+            android:src="@drawable/back"
+            app:layout_constraintBottom_toTopOf="@id/guideline_for_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="59dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="#6D6D80" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="56dp"
+            android:padding="3dp"
+            android:text="@string/back"
+            android:textAlignment="center"
+            android:textFontWeight="300"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/backButton"
+            app:layout_constraintStart_toStartOf="@id/backButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/restriction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="222dp"
+            android:background="#191926"
+            android:text="@string/_13"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/cinemaName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/avengers_end_game"
+            android:textColor="#ECECEC"
+            android:textSize="40sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/restriction" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierFirst"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="cinemaName" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/genre"
+            android:textColor="#FF3466"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierFirst" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="genre" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierSecond">
+
+            <ImageView
+                android:id="@+id/firstStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/star_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+
+            <ImageView
+                android:id="@+id/secondStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="4dp"
+                android:src="@drawable/star_icon"
+                app:layout_constraintStart_toStartOf="@id/firstStar"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+
+            <ImageView
+                android:id="@+id/thirdStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:src="@drawable/star_icon"
+                app:layout_constraintStart_toStartOf="@id/secondStar"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+
+            <ImageView
+                android:id="@+id/fourthStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:src="@drawable/star_icon"
+                app:layout_constraintStart_toStartOf="@id/thirdStar"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+
+            <ImageView
+                android:id="@+id/fifthStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_gravity="center"
+                android:src="@drawable/star_icon_empty"
+                app:layout_constraintStart_toStartOf="@id/fourthStar"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:text="@string/_125_reviews"
+                android:textColor="#6D6D80"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@id/fifthStar"
+                app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierThird"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="linear" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/storyline"
+            android:textColor="#ECECEC"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierThird" />
+
+        <TextView
+            android:id="@+id/mainText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:fontFamily="sans-serif-light"
+            android:lineHeight="20dp"
+            android:text="@string/main_text"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="mainText" />
+
+        <TextView
+            android:id="@+id/cast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/cast"
+            android:textColor="#ECECEC"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierFour" />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierFive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="cast" />
+
+        <ImageView
+            android:id="@+id/firstPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie"
+            app:layout_constraintBottom_toTopOf="@id/barrierSix"
+            app:layout_constraintDimensionRatio="H,1"
+            app:layout_constraintEnd_toStartOf="@+id/secondPhoto"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrierFive"
+            app:layout_constraintWidth_percent="0.2"
+            />
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierSix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="firstPhoto" />
+
+        <ImageView
+            android:id="@+id/secondPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie2"
+            app:layout_constraintBottom_toTopOf="@id/barrierSix"
+            app:layout_constraintEnd_toStartOf="@+id/thirdPhoto"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/firstPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierFive"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <ImageView
+            android:id="@+id/thirdPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie3"
+            app:layout_constraintBottom_toTopOf="@id/barrierSix"
+            app:layout_constraintEnd_toStartOf="@+id/fourthPhoto"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/secondPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierFive"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <ImageView
+            android:id="@+id/fourthPhoto"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/movie4"
+            app:layout_constraintBottom_toTopOf="@id/barrierSix"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/thirdPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierFive"
+            app:layout_constraintWidth_percent="0.2" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="@string/firstActor"
+            android:textColor="#D8D8D8"
+            android:textFontWeight="900"
+            app:layout_constraintEnd_toEndOf="@id/firstPhoto"
+            app:layout_constraintStart_toStartOf="@id/firstPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierSix" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/secondActor"
+            android:textColor="#D8D8D8"
+            app:layout_constraintEnd_toEndOf="@id/secondPhoto"
+            app:layout_constraintStart_toStartOf="@id/secondPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierSix" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/thirdActor"
+            android:textColor="#D8D8D8"
+            app:layout_constraintEnd_toEndOf="@id/thirdPhoto"
+            app:layout_constraintStart_toStartOf="@id/thirdPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierSix" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/fourthActor"
+            android:textColor="#D8D8D8"
+            app:layout_constraintEnd_toEndOf="@id/fourthPhoto"
+            app:layout_constraintStart_toStartOf="@id/fourthPhoto"
+            app:layout_constraintTop_toBottomOf="@id/barrierSix" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
