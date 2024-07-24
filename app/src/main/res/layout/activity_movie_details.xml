@@ -12,7 +12,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent"
+        android:paddingBottom="24dp">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_for_background"
@@ -32,30 +33,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/backButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="18dp"
-            android:layout_marginTop="59dp"
-            android:src="@drawable/ic_back"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="#6D6D80" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="56dp"
-            android:padding="3dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="60dp"
+            android:drawableStart="@drawable/ic_back"
+            android:padding="4dp"
+            android:gravity="top"
             android:text="@string/back"
-            android:textAlignment="center"
-            android:textFontWeight="300"
+            android:textColor="#FFFFFF"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/backButton"
-            app:layout_constraintStart_toStartOf="@id/backButton"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
         <TextView
             android:id="@+id/restriction"
@@ -139,8 +131,8 @@
                 android:id="@+id/thirdStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="4dp"
                 android:src="@drawable/star_icon"
                 app:layout_constraintStart_toStartOf="@id/secondStar"
                 app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
@@ -149,8 +141,8 @@
                 android:id="@+id/fourthStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="4dp"
                 android:src="@drawable/star_icon"
                 app:layout_constraintStart_toStartOf="@id/thirdStar"
                 app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
@@ -159,8 +151,8 @@
                 android:id="@+id/fifthStar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="4dp"
                 android:src="@drawable/star_icon_empty"
                 app:layout_constraintStart_toStartOf="@id/fourthStar"
                 app:layout_constraintTop_toBottomOf="@id/barrierSecond" />
@@ -168,8 +160,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
                 android:layout_gravity="center"
+                android:layout_marginStart="8dp"
                 android:text="@string/_125_reviews"
                 android:textColor="#6D6D80"
                 android:textSize="14sp"
@@ -250,8 +242,7 @@
             app:layout_constraintHorizontal_chainStyle="spread"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/barrierFive"
-            app:layout_constraintWidth_percent="0.2"
-            />
+            app:layout_constraintWidth_percent="0.2" />
 
         <androidx.constraintlayout.widget.Barrier
             android:id="@+id/barrierSix"
